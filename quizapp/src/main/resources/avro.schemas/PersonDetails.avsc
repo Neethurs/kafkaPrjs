@@ -1,0 +1,32 @@
+{
+    "type": "record",
+    "name": "PersonDetails",
+    "namespace": "com.telusko.quizapp.schema",
+    "fields": [
+    {
+        "name": "empId",
+        "type": "int",
+        "default": -1
+    },
+    {
+        "name": "firstName",
+        "type": ["null","string"],
+        "default": null
+    },
+    {
+        "name": "lastName",
+        "type": ["null","string"],
+        "default": null
+    },
+    {
+        "name": "age",
+        "type": "int",
+        "default": -1
+    },
+    {
+        "name": "sex",
+        "type": ["null","string"],
+        "default": null
+    }
+    ]
+}
