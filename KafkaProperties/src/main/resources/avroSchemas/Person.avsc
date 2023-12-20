@@ -1,0 +1,32 @@
+{
+    "type": "record",
+    "name": "PersonDetails",
+    "namespace": "com.example.demo.schema",
+    "fields": [
+    {
+        "name": "empId",
+        "type": "int"
+
+    },
+    {
+        "name": "firstName",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "lastName",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "age",
+        "type": "int"
+
+    },
+    {
+        "name": "sex",
+        "type": ["null","string"]
+
+    }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "record",
+    "name": "VehicleDetails",
+    "namespace": "com.example.demo.schema",
+    "fields": [
+    {
+        "name": "empId",
+        "type": "int"
+
+    },
+    {
+        "name": "vehicleNo",
+        "type": ["null","string"],
+        "default": null
+    },
+    {
+        "name": "vehicleName",
+        "type": ["null","string"],
+        "default": null
+    },
+    {
+        "name": "insurance",
+        "type": ["null","string"],
+        "default": null
+    },
+    {
+            "name": "manufacturingYear",
+            "type": "int"
+
+    }
+    ]
+}
