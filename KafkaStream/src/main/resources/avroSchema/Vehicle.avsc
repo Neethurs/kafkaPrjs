@@ -1,0 +1,32 @@
+{
+    "type": "record",
+    "name": "VehicleDetails",
+    "namespace": "com.example.kafka.schema",
+    "fields": [
+    {
+        "name": "empId",
+        "type": "int"
+
+    },
+    {
+        "name": "vehicleNo",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "vehicleName",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "insurance",
+        "type": ["null","string"]
+
+    },
+    {
+            "name": "manufacturingYear",
+            "type": "int"
+
+    }
+    ]
+}

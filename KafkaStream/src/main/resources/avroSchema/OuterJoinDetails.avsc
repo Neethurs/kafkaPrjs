@@ -1,0 +1,67 @@
+{
+    "type": "record",
+    "name": "OuterJoinDetails",
+    "namespace": "com.example.kafka.schema",
+    "fields": [
+    {
+        "name": "empId",
+        "type": "int"
+
+    },
+    {
+        "name": "firstName",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "lastName",
+        "type": ["null","string"]
+
+    },
+    {
+        "name": "age",
+        "type": "int"
+
+    },
+    {
+        "name": "sex",
+        "type": ["null","string"]
+
+    },
+     {
+            "name": "houseName",
+            "type": ["null","string"]
+
+        },
+        {
+            "name": "streetName",
+            "type": ["null","string"]
+
+        },
+        {
+            "name": "city",
+            "type": ["null","string"]
+
+        },
+        {
+            "name": "postCode",
+            "type": ["null","string"]
+
+        },
+        {
+                "name": "district",
+                "type": ["null","string"]
+
+        },
+        {
+                "name": "state",
+                "type": ["null","string"]
+
+        },
+        {
+                "name": "country",
+                "type": ["null","string"]
+
+        }
+    ]
+}
