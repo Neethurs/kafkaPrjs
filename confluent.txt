@@ -1,0 +1,44 @@
+How to Run Confluent on Windows?
+**************************************8
+
+1. Open a Linux terminal and run the following command to download the TAR file for Confluent Platform 6.1 
+
+wget https://packages.confluent.io/archive/6.1/confluent-6.1.0.tar.gz
+
+2.When the download completes, run the following command to extract the files from the archive:
+
+When the download completes, run the following command to extract the files from the archive:
+
+3.Set the CONFLUENT_HOME environment variable
+
+export CONFLUENT_HOME=~/confluent-6.1.0
+export PATH=$CONFLUENT_HOME/bin:$PATH
+
+4.Run the following command to start up all of the Confluent components:
+
+confluent local services start
+
+
+Your output should resemble the following:
+
+The local commands are intended for a single-node development environment only,
+NOT for production usage. https://docs.confluent.io/current/cli/index.html
+Using CONFLUENT_CURRENT: /tmp/confluent.485994
+Starting ZooKeeper
+ZooKeeper is [UP]
+Starting Kafka
+Kafka is [UP]
+Starting Schema Registry
+Schema Registry is [UP]
+Starting Kafka REST
+Kafka REST is [UP]
+Connect is [UP]
+ksqlDB Server is [UP]
+Control Center is [UP]
+
+127.0.0.1:9092
+
+   streams:
+     autoOffsetReset: "earliest"
+     application-id: "testID"
+     auto-startup: false

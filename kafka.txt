@@ -1,0 +1,56 @@
+Stop Kafka and Zookeeper, then
+
+Disable IPv6 on WSL2:
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+
+password arish
+After that, in the kakfa folder, go to config/server.properties and edit the file to add the line:
+
+listeners=PLAINTEXT://localhost:9092
+
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic first_topic --create --partitions 3 --replication-factor 1
+
+kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+
+ zookeeper-server-start.sh config/zookeeper.properties
+
+ kafka-server-start.sh config/server.properties
+
+<dependency>
+  <groupId>org.springframework.kafka</groupId>
+  <artifactId>spring-kafka</artifactId>
+  <version>3.0.12</version>
+</dependency>
+
+<dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+<dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+
+application.properties
+
+spring.kafka.consumer.bootstrap-servers: localhost:9092
+spring.kafka.consumer.group-id: group-id
+spring.kafka.consumer.auto-offset-reset: earliest
+spring.kafka.consumer.key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.consumer.value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+spring.kafka.producer.bootstrap-servers: localhost:9092
+spring.kafka.producer.key-serializer: org.apache.kafka.common.serialization.StringSerializer
+spring.kafka.producer.value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+
